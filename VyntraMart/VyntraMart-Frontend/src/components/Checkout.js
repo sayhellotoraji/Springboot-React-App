@@ -1,17 +1,15 @@
 
 
-import shirt from 'components/images/shirt.jpg'
-
 import NavigationBar from 'components/NavigationBar';
-import ShippingInfo from 'components/CheckoutComponent/ShippingInfo'
-import Payment from 'components/CheckoutComponent/Payment'
+import ShippingInfo from 'components/UserComponents/CheckoutComponent/ShippingInfo'
+import Payment from 'components/UserComponents/CheckoutComponent/Payment'
 
-import OrderSummary from 'components/Universal/OrderSummary'
-import ItemQuantity from 'components/Universal/ItemQuantity'
-import ProductInfo from 'components/Universal/ProductInfo'
+import OrderSummary from 'components/UserComponents/Universal/OrderSummary'
+import ItemQuantity from 'components/UserComponents/Universal/ItemQuantity'
+import ProductInfo from 'components/UserComponents/Universal/ProductInfo'
 
 import { Table } from 'react-bootstrap'
-import 'components/main.css'
+import 'components/static/css/main.css'
 
 import React, { Component } from 'react'
 

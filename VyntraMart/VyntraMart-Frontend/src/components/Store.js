@@ -3,11 +3,11 @@ import React, { Component } from 'react'
 
 
 import NavigationBar from 'components/NavigationBar'
-import ProductCard from 'components/StoreComponent/ProductCard'
-import Slideshow from 'components/StoreComponent/Slideshow'
+import ProductCard from 'components/UserComponents/StoreComponent/ProductCard'
+import Slideshow from 'components/UserComponents/StoreComponent/Slideshow'
 
-import 'components/main.css'
-import { UserProvider, UserConsumer } from './userContext'
+import 'components/static/css/main.css'
+import { UserConsumer } from 'components/static/js/userContext'
 
  
 function cartUpdate(cart){
@@ -29,7 +29,7 @@ function cartUpdate(cart){
                
                 
                 console.log('User:',user)
-                if(user === 'AnonymousUser'){
+                if(user == 'AnonymousUser'){
                     // console.log("Not logged in")
                     addCookieItem(productId, action, cart)
                 }

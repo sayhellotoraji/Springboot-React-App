@@ -1,21 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
+
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import Layout from './components/Layout';
-import Store from './components/Store';
-import Cart from './components/Cart';
-import Checkout from './components/Checkout';
-import ImageSlider from './components/ImageSliderComponent/ImageSlider';
+import Store from 'components/Store';
+import Cart from 'components/Cart';
+import Checkout from 'components/Checkout';
+import ImageSlider from 'components/UserComponents/ImageSliderComponent/ImageSlider';
 
 
-import ListProductsComponent from './components/AdminComponents/ListProductsComponent';
-import ProductComponent from './components/AdminComponents/ProductComponent';
-import Dashboard from './components/AdminComponents/Dashboard';
-import { Helmet } from 'react-helmet';
-import { UserProvider } from './components/userContext';
+import ListProductsComponent from 'components/AdminComponents/ListProductsComponent';
+import ProductComponent from 'components/AdminComponents/ProductComponent';
+import Dashboard from 'components/AdminComponents/Dashboard';
 
+import { UserProvider } from 'components/static/js/userContext';
 
 //Create Cookie
 function getCookie(name){

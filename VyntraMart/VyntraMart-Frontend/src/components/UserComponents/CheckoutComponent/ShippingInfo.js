@@ -3,7 +3,6 @@
 import React, { Component } from 'react'
 
 
-
 export class ShippingInfo extends Component {
 
     componentDidMount(){

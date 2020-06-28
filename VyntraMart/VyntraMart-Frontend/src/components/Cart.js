@@ -1,17 +1,15 @@
 import React, { Component } from 'react'
 
-import shirt from 'components/images/shirt.jpg'
-import headphones from 'components/images/headphones.jpg'
 import { Table }  from 'react-bootstrap'
 
 import NavigationBar from 'components/NavigationBar';
-import QuantityUpdater from 'components/CartComponent/QuantityUpdater'
+import QuantityUpdater from 'components/UserComponents/CartComponent/QuantityUpdater'
 
-import OrderSummary from 'components/Universal/OrderSummary'
-import ItemQuantity from 'components/Universal/ItemQuantity'
-import ProductInfo from 'components/Universal/ProductInfo'
+import OrderSummary from 'components/UserComponents/Universal/OrderSummary'
+import ItemQuantity from 'components/UserComponents/Universal/ItemQuantity'
+import ProductInfo from 'components/UserComponents/Universal/ProductInfo'
 
-import 'components/main.css'
+import 'components/static/css/main.css'
 
 
 

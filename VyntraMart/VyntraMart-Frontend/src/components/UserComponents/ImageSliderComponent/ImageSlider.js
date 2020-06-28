@@ -3,11 +3,11 @@ import shoe1 from 'components/images/shoe1.jpg'
 import shoe2 from 'components/images/shoe2.jpg'
 import shoe3 from 'components/images/shoe3.jpg'
 
-import arrowleft from 'components/assets/arrow-left.png'
-import arrowright from 'components/assets/arrow-right.png'
+import arrowleft from 'components/static/assets/arrow-left.png'
+import arrowright from 'components/static/assets/arrow-right.png'
 
-import 'components/main.css'
-import './slider.css'
+import 'components/static/css/main.css'
+import 'components/UserComponents/ImageSliderComponent/slider.css'
 import NavigationBar from 'components/NavigationBar'
 
 function ImageSlider() {
@@ -22,20 +22,20 @@ function ImageSlider() {
     <div id="content-wrapper">
 		
 		<div className="column">
-			<img id='featured' src={shoe1} />
+			<img id='featured' src={shoe1} alt="Product"/>
 
 			<div id="slide-wrapper" >
-				<img id="slideLeft" className="arrow" src={arrowleft}/>
+				<img id="slideLeft" className="arrow" src={arrowleft} alt="<"/>
 
 				<div id="slider">
-					<img className="sliderthumbnail active" src={shoe1} />
-					<img className="sliderthumbnail" src={shoe2} />
-					<img className="sliderthumbnail" src={shoe3} />
+					<img className="sliderthumbnail active" src={shoe1} alt="image1"/>
+					<img className="sliderthumbnail" src={shoe2} alt="image2"/>
+					<img className="sliderthumbnail" src={shoe3} alt="image3"/>
 
 	
 				</div>
 
-				<img id="slideRight" className="arrow" src={arrowright} />
+				<img id="slideRight" className="arrow" src={arrowright} alt=">"/>
 			</div>
 		</div>
 

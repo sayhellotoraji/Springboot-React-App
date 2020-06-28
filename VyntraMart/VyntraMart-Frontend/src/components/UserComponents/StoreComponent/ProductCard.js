@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import placeholder from "components/assets/placeholder.png"
+import placeholder from "components/static/assets/placeholder.png"
 
 
 
@@ -8,7 +8,7 @@ export class ProductCard extends Component {
         return (
           
     <div className="col-lg-4">  
-        <img className="cardthumbnail" src={placeholder} />
+        <img className="cardthumbnail" src={placeholder} alt="placeholder"/>
         <div className="box-element product">
             <h6><strong>{this.props.productName}</strong></h6>
             <hr/>

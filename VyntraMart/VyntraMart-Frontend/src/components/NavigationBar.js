@@ -1,9 +1,9 @@
 import React from 'react'
-import { Button, Nav, Navbar } from 'react-bootstrap'
-import 'components/main.css'
+import { Navbar } from 'react-bootstrap'
+import 'components/static/css/main.css'
 
-import cart from 'components/assets/cart.png'
-import { Helmet } from 'react-helmet'
+import cart from 'components/static/assets/cart.png'
+
 
 
 
@@ -30,7 +30,7 @@ function NavigationBar() {
                     <a href="#"className="btn btn-warning">Login</a>
                     
                     <a href="cart">
-                    <img  id="cart-icon" src={cart} />
+                    <img  id="cart-icon" src={cart} alt="cart" />
                     </a>
                     <p id="cart-total">0</p>
         
