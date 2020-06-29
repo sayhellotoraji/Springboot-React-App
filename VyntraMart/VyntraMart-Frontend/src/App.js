@@ -86,7 +86,7 @@ class App extends Component{
   render(){
 
     const { currentUser, showModeratorBoard, showAdminBoard } = this.state;
- 
+ console.log(currentUser)
   return (
     <React.Fragment>
       
@@ -98,7 +98,7 @@ class App extends Component{
             <Route path="/admin/products/:id" component={ProductComponent} />
             
             
-            <UserProvider value={usercookie}>
+            <UserProvider value={usercookie} >
 
             <Route exact path="/login" component={Login} />
             <Route exact path="/register" component={Register} />
