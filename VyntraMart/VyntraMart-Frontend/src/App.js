@@ -1,7 +1,11 @@
-import React from 'react';
+import React, {Component} from 'react';
 
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
+import Login from 'components/UserComponents/AuthComponents/LoginComponent';
+
+import Register from 'components/UserComponents/AuthComponents/RegisterComponent';
 
 import Store from 'components/Store';
 import Cart from 'components/Cart';
@@ -14,6 +18,9 @@ import ProductComponent from 'components/AdminComponents/ProductComponent';
 import Dashboard from 'components/AdminComponents/Dashboard';
 
 import { UserProvider } from 'components/static/js/userContext';
+
+
+import AuthService from "service/Auth/auth.service";
 
 //Create Cookie
 function getCookie(name){
@@ -38,7 +45,6 @@ if(cart==undefined){
 }
 
 
-
 console.log('Cart:', cart)
 
 var usercookie = JSON.stringify(cart)
@@ -46,8 +52,41 @@ var usercookie = JSON.stringify(cart)
 
 
 
-function App() {
+class App extends Component{
   
+
+  constructor(props) {
+    super(props);
+    this.logOut = this.logOut.bind(this);
+
+    this.state = {
+      
+      showAdminBoard: false,
+      currentUser: undefined
+    };
+  }
+
+  componentDidMount() {
+    const user = AuthService.getCurrentUser();
+
+    if (user) {
+      this.setState({
+        currentUser: user,
+        
+        showAdminBoard: user.roles.includes("ROLE_ADMIN")
+      });
+    }
+  }
+
+  logOut() {
+    AuthService.logout();
+  }
+
+
+  render(){
+
+    const { currentUser, showModeratorBoard, showAdminBoard } = this.state;
+ 
   return (
     <React.Fragment>
       
@@ -61,12 +100,15 @@ function App() {
             
             <UserProvider value={usercookie}>
 
+            <Route exact path="/login" component={Login} />
+            <Route exact path="/register" component={Register} />
+
             <Route exact path="/" component={Store}/>
 
             
-            <Route exact path="/product_view" component={ImageSlider}/>
-            <Route exact path="/cart" component={Cart}/>
-            <Route exact path="/checkout" component={Checkout}/>
+            <Route exact path="/user/product_view" component={ImageSlider}/>
+            <Route exact path="/user/cart" component={Cart}/>
+            <Route exact path="/user/checkout" component={Checkout}/>
 
             </UserProvider>
             
@@ -78,6 +120,8 @@ function App() {
       
     </React.Fragment>
   );
+}
+
 }
 
 export default App;

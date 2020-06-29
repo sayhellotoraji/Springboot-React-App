@@ -35,7 +35,7 @@ export class Checkout extends Component {
 
     <div className="col-lg-6">
         <div className="box-element">
-            <a className="btn btn-outline-dark" href="cart">&#x2190; Back to Cart</a>
+            <a className="btn btn-outline-dark" href="/user/cart">&#x2190; Back to Cart</a>
             <hr />
             <h3>Order Summary</h3>
             

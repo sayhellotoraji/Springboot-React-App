@@ -27,9 +27,9 @@ function NavigationBar() {
                     
                 </ul>
                 <div className="form-inline my-2 my-lg-0">
-                    <a href="#"className="btn btn-warning">Login</a>
+                    <a href="login"className="btn btn-warning">Login</a>
                     
-                    <a href="cart">
+                    <a href="/user/cart">
                     <img  id="cart-icon" src={cart} alt="cart" />
                     </a>
                     <p id="cart-total">0</p>
