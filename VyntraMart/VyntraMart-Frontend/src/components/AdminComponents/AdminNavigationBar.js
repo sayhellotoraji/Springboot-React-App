@@ -9,7 +9,7 @@ function AdminNavigationBar() {
 <Navbar bg="dark" variant="dark">
     <Navbar.Brand href="#home">Vyntra Admin</Navbar.Brand>
     <Nav className="mr-auto">
-      <Nav.Link href="/admin/dashboard">Dashboard</Nav.Link>
+      <Nav.Link href="/admin">Dashboard</Nav.Link>
       <Nav.Link href="/admin/products">Products</Nav.Link>
       <Nav.Link href="#user">User</Nav.Link>
     </Nav>

@@ -29,7 +29,7 @@ function cartUpdate(cart){
                
                 
                 console.log('User:',user)
-                if(user == 'AnonymousUser'){
+                if(user === 'AnonymousUser'){
                     // console.log("Not logged in")
                     addCookieItem(productId, action, cart)
                 }
@@ -42,13 +42,13 @@ function cartUpdate(cart){
     function addCookieItem(productId, action, cart){
     console.log("Not logged in..")
     
-    if(action =='add'){
-        if(cart[productId]==undefined){
+    if(action ==='add'){
+        if(cart[productId]===undefined){
     //below code used for testing- actual code 
     cart[productId]={'quantity':1}
-            // if(productId==1)
+            // if(productId===1)
             // cart[productId]={'productName':'shirt','price':500, 'quantity':1}
-            // else if(productId==2)
+            // else if(productId===2)
             // cart[productId]={'productName':'blazer','price':2000, 'quantity':1}
             // else
             // cart[productId]={'productName':'jeans','price':1000, 'quantity':1}
@@ -60,7 +60,7 @@ function cartUpdate(cart){
         }
     }
     
-    if(action =='remove'){
+    if(action ==='remove'){
         cart[productId]['quantity'] -= 1
         if(cart[productId]['quantity']<=0){
             console.log("Remove item")
@@ -85,6 +85,7 @@ export class Store extends Component {
     
    componentDidMount(){
        var cart=(this.context)
+       
       
        cartUpdate(cart)
    }

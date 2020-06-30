@@ -30,7 +30,7 @@ function getCookie(name){
       var cookiePair=cookieArr[i].split("=");
 
 
-      if(name == cookiePair[0].trim()){
+      if(name === cookiePair[0].trim()){
           return decodeURIComponent(cookiePair[1]);
       }
   }
@@ -38,7 +38,7 @@ function getCookie(name){
 }
 
 var cart=JSON.parse(getCookie('cart'))
-if(cart==undefined){
+if(cart===undefined){
   cart={}
   console.log('Cart was created!')
   document.cookie = 'cart='+JSON.stringify(cart) +";domain=;path=/"
@@ -61,7 +61,6 @@ class App extends Component{
 
     this.state = {
       
-      showAdminBoard: false,
       currentUser: undefined
     };
   }
@@ -69,11 +68,12 @@ class App extends Component{
   componentDidMount() {
     const user = AuthService.getCurrentUser();
 
+    console.log(user)
+
     if (user) {
       this.setState({
         currentUser: user,
         
-        showAdminBoard: user.roles.includes("ROLE_ADMIN")
       });
     }
   }
@@ -85,15 +85,15 @@ class App extends Component{
 
   render(){
 
-    const { currentUser, showModeratorBoard, showAdminBoard } = this.state;
- console.log(currentUser)
+    const { currentUser} = this.state;
+ 
   return (
     <React.Fragment>
       
       
       <Router>
         <Switch>
-            <Route exact path="/admin/dashboard" component={Dashboard}/>
+            <Route exact path="/admin" component={Dashboard}/>
             <Route exact path="/admin/products" component={ListProductsComponent}/>
             <Route path="/admin/products/:id" component={ProductComponent} />
             
