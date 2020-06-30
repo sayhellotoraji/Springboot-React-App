@@ -1,4 +1,6 @@
-import React from 'react'
+
+import React, { Component } from 'react'
+
 import { Navbar } from 'react-bootstrap'
 import 'components/static/css/main.css'
 
@@ -7,12 +9,10 @@ import cart from 'components/static/assets/cart.png'
 
 
 
-function NavigationBar() {
-    
-    
-    return (
-
-        <Navbar expand="lg" bg="dark">
+export class NavigationBar extends Component {
+    render() {
+        return (
+            <Navbar expand="lg" bg="dark">
            
             {/*Replace #home with {% url 'store' %} */}
             <Navbar.Brand style={{color: 'hsl(0, 0%, 98%)'}} href="#home">Vyntra Mart</Navbar.Brand>
@@ -38,9 +38,10 @@ function NavigationBar() {
             </div>
 
         </Navbar>
-        
-        
-    )
+        )
+    }
 }
+
+
 
 export default NavigationBar
