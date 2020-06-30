@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 
 
 
-import NavigationBar from 'components/NavigationBar'
 import ProductCard from 'components/UserComponents/StoreComponent/ProductCard'
 import Slideshow from 'components/UserComponents/StoreComponent/Slideshow'
 
@@ -18,7 +17,7 @@ function cartUpdate(cart){
         
         var cart = JSON.parse(JSON.stringify(cart))
         var updateBtns = document.getElementsByClassName('update-cart')
-        console.log(updateBtns)
+        // console.log(updateBtns)
         for(var i=0;i< updateBtns.length;i++){
             updateBtns[i].addEventListener('click',function(){
                 var productId = this.dataset.product
@@ -84,8 +83,8 @@ export class Store extends Component {
 
     
    componentDidMount(){
-       var cart=(this.context)
-       
+       var cart=this.context
+       console.log(cart)
       
        cartUpdate(cart)
    }
@@ -95,7 +94,7 @@ export class Store extends Component {
 <UserConsumer>
 {cart =>{
     return <React.Fragment>
-    <NavigationBar />
+    
   
     
     <Slideshow/>

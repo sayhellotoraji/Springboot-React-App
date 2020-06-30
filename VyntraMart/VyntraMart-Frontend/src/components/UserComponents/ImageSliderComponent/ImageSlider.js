@@ -8,13 +8,11 @@ import arrowright from 'components/static/assets/arrow-right.png'
 
 import 'components/static/css/main.css'
 import 'components/UserComponents/ImageSliderComponent/slider.css'
-import NavigationBar from 'components/NavigationBar'
 
 function ImageSlider() {
     return (
 
 <React.Fragment>
-	<NavigationBar/>
 	
     <br/>
 <a  style={{marginLeft: '90px'}}className="btn btn-dark" href="/">&#x2190; Continue Shopping</a>

@@ -13,6 +13,9 @@ import Checkout from 'components/Checkout';
 import ImageSlider from 'components/UserComponents/ImageSliderComponent/ImageSlider';
 
 
+import NavigationBar from 'components/NavigationBar'
+
+
 import ListProductsComponent from 'components/AdminComponents/ListProductsComponent';
 import ProductComponent from 'components/AdminComponents/ProductComponent';
 import Dashboard from 'components/AdminComponents/Dashboard';
@@ -20,7 +23,6 @@ import Dashboard from 'components/AdminComponents/Dashboard';
 import { UserProvider } from 'components/static/js/userContext';
 
 
-import AuthService from "service/Auth/auth.service";
 
 //Create Cookie
 function getCookie(name){
@@ -55,42 +57,20 @@ var usercookie = JSON.stringify(cart)
 class App extends Component{
   
 
-  constructor(props) {
-    super(props);
-    this.logOut = this.logOut.bind(this);
-
-    this.state = {
-      
-      currentUser: undefined
-    };
-  }
-
-  componentDidMount() {
-    const user = AuthService.getCurrentUser();
-
-    console.log(user)
-
-    if (user) {
-      this.setState({
-        currentUser: user,
-        
-      });
-    }
-  }
-
-  logOut() {
-    AuthService.logout();
-  }
+  
 
 
   render(){
 
-    const { currentUser} = this.state;
+    // const {currentUser} = this.state;
+    
  
   return (
     <React.Fragment>
-      
-      
+      <UserProvider>
+      <NavigationBar />
+      </UserProvider>
+
       <Router>
         <Switch>
             <Route exact path="/admin" component={Dashboard}/>
@@ -104,8 +84,6 @@ class App extends Component{
             <Route exact path="/register" component={Register} />
 
             <Route exact path="/" component={Store}/>
-
-            
             <Route exact path="/user/product_view" component={ImageSlider}/>
             <Route exact path="/user/cart" component={Cart}/>
             <Route exact path="/user/checkout" component={Checkout}/>
