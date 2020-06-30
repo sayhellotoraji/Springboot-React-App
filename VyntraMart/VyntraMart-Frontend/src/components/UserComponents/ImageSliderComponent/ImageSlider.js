@@ -6,6 +6,8 @@ import shoe3 from 'components/images/shoe3.jpg'
 import arrowleft from 'components/static/assets/arrow-left.png'
 import arrowright from 'components/static/assets/arrow-right.png'
 
+
+import NavigationBar from 'components/NavigationBar'
 import 'components/static/css/main.css'
 import 'components/UserComponents/ImageSliderComponent/slider.css'
 
@@ -13,7 +15,7 @@ function ImageSlider() {
     return (
 
 <React.Fragment>
-	
+	<NavigationBar/>
     <br/>
 <a  style={{marginLeft: '90px'}}className="btn btn-dark" href="/">&#x2190; Continue Shopping</a>
 

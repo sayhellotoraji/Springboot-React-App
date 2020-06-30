@@ -5,6 +5,7 @@ import CheckButton from "react-validation/build/button";
 
 import './auth.css';
 
+import NavigationBar from 'components/NavigationBar'
 import profile_pic from 'components/static/assets/user_profile.png'
 
 import AuthService from "service/Auth/auth.service";
@@ -85,6 +86,8 @@ export default class Login extends Component {
 
   render() {
     return (
+      <React.Fragment>
+        <NavigationBar/>
       <div className="col-md-12">
         <div className="card card-container">
           <img
@@ -151,6 +154,7 @@ export default class Login extends Component {
           </Form>
         </div>
       </div>
+      </React.Fragment>
     );
   }
 }

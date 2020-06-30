@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 import { Table }  from 'react-bootstrap'
 
+import NavigationBar from 'components/NavigationBar'
 import QuantityUpdater from 'components/UserComponents/CartComponent/QuantityUpdater'
 
 import OrderSummary from 'components/UserComponents/Universal/OrderSummary'
@@ -19,7 +20,7 @@ export class Cart extends Component {
         return (
 <React.Fragment>
 
-
+<NavigationBar/>
     
 <div className="row">
     <div className="col-lg-12">

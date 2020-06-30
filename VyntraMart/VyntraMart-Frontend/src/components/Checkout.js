@@ -1,5 +1,6 @@
 
 
+import NavigationBar from 'components/NavigationBar'
 import ShippingInfo from 'components/UserComponents/CheckoutComponent/ShippingInfo'
 import Payment from 'components/UserComponents/CheckoutComponent/Payment'
 
@@ -19,6 +20,7 @@ export class Checkout extends Component {
         return (
 <React.Fragment>
 
+<NavigationBar />
 <div className="row">
 
     <div className="col-lg-6">

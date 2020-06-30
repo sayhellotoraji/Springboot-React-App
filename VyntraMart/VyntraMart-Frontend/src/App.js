@@ -13,8 +13,6 @@ import Checkout from 'components/Checkout';
 import ImageSlider from 'components/UserComponents/ImageSliderComponent/ImageSlider';
 
 
-import NavigationBar from 'components/NavigationBar'
-
 
 import ListProductsComponent from 'components/AdminComponents/ListProductsComponent';
 import ProductComponent from 'components/AdminComponents/ProductComponent';
@@ -67,9 +65,7 @@ class App extends Component{
  
   return (
     <React.Fragment>
-      <UserProvider>
-      <NavigationBar />
-      </UserProvider>
+      
 
       <Router>
         <Switch>

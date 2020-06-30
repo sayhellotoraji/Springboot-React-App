@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 
 
+import NavigationBar from 'components/NavigationBar'
 import ProductCard from 'components/UserComponents/StoreComponent/ProductCard'
 import Slideshow from 'components/UserComponents/StoreComponent/Slideshow'
 
@@ -96,7 +97,7 @@ export class Store extends Component {
     return <React.Fragment>
     
   
-    
+    <NavigationBar />
     <Slideshow/>
 
     
